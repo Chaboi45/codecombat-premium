@@ -242,11 +242,4 @@ module.exports = class AccountSettingsView extends CocoView
 
     permissions = []
 
-    unless application.isProduction()
-      adminCheckbox = @$el.find('#admin')
-      if adminCheckbox.length
-        permissions.push 'admin' if adminCheckbox.prop('checked')
-      godmodeCheckbox = @$el.find('#godmode')
-      if godmodeCheckbox.length
-        permissions.push 'godmode' if godmodeCheckbox.prop('checked')
-      @user.set('permissions', permissions)
+    
