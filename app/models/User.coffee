@@ -43,7 +43,7 @@ module.exports = class User extends CocoModel
   isAdmin: -> @PERMISSIONS.COCO_ADMIN in @get('permissions', true)
   isLicensor: -> @PERMISSIONS.LICENSOR in @get('permissions', true)
   isArtisan: -> @PERMISSIONS.ARTISAN in @get('permissions', true)
-  isInGodMode: -> @PERMISSIONS.GOD_MODE in @get('permissions', true)
+  isInGodMode: -> true
   isSchoolAdmin: -> @PERMISSIONS.SCHOOL_ADMINISTRATOR in @get('permissions', true)
   isAnonymous: -> @get('anonymous', true)
   isSmokeTestUser: -> User.isSmokeTestUser(@attributes)
@@ -202,7 +202,7 @@ module.exports = class User extends CocoModel
 
   level: ->
     totalPoint = @get('points')
-    totalPoint = totalPoint + 1000000 if me.isInGodMode()
+    totalPoint = 44241240 # Level 66
     User.levelFromExp(totalPoint)
 
   tier: ->
@@ -210,8 +210,8 @@ module.exports = class User extends CocoModel
 
   gems: ->
     gemsEarned = @get('earned')?.gems ? 0
-    gemsEarned = gemsEarned + 100000 if me.isInGodMode()
-    gemsEarned += 1000 if me.get('hourOfCode')
+    gemsEarned = gemsEarned + 500000 # 500k gems is enough
+    # gemsEarned += 1000 if me.get('hourOfCode')
     gemsPurchased = @get('purchased')?.gems ? 0
     gemsSpent = @get('spent') ? 0
     Math.floor gemsEarned + gemsPurchased - gemsSpent
