@@ -78,7 +78,7 @@
     "algoliasearch": "^3.13.1",
     "animejs": "^3.0.1",
     "async": "2.5.0",
-    "aws-sdk": "~2.0.0",
+    "aws-sdk": "~2.814.0",
     "backbone": "~1.1.1",
     "basic-auth": "^1.0.4",
     "bayesian-battle": "0.0.7",
