@@ -129,7 +129,7 @@
     "lscache": "~1.0.5",
     "lz-string": "^1.3.3",
     "mailchimp-api-v3": "^1.4.1",
-    "marked": "~0.3.0",
+    "marked": "~4.0.10",
     "method-override": "^2.3.7",
     "moment": "~2.19.0",
     "moment-timezone": "~0.5.21",
